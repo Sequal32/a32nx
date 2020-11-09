@@ -1,5 +1,9 @@
 <ModelBehaviors>
     <Template Name="FBW_Airbus_FIRE_TEST_LIGHTS">
+        <DefaultTemplateParameters>
+            <SWITCH_POSITION_TYPE>L</SWITCH_POSITION_TYPE>
+            <SWITCH_POSITION_VAR>A32NX_FIRE_TEST_LIGHTS_#TYPE##ID#</SWITCH_POSITION_VAR>
+        </DefaultTemplateParameters>
         <UseTemplate Name="FBW_Push_Toggle">
             <DUMMY_BUTTON>True</DUMMY_BUTTON>
             <SEQ1_CODE>(L:A32NX_FIRE_TEST_#TYPE##ID#, Bool)</SEQ1_CODE>
@@ -8,6 +12,10 @@
     </Template>
 
     <Template Name="FBW_Airbus_FIRE_TEST_BUTTON">
+        <DefaultTemplateParameters>
+            <SWITCH_POSITION_TYPE>L</SWITCH_POSITION_TYPE>
+            <SWITCH_POSITION_VAR>A32NX_FIRE_TEST_#TYPE##ID#</SWITCH_POSITION_VAR>
+        </DefaultTemplateParameters>
         <UseTemplate Name="FBW_Push_Held">
             <HOLD_SIMVAR>L:A32NX_FIRE_TEST_#TYPE##ID#</HOLD_SIMVAR>
         </UseTemplate>
@@ -32,8 +40,8 @@
             <CURSOR>Grab</CURSOR>
 
             <ANIM_LENGTH>100</ANIM_LENGTH>
-            <SWITCH_POSITION_TYPE>O</SWITCH_POSITION_TYPE>
-            <SWITCH_POSITION_VAR>_ButtonAnimVar</SWITCH_POSITION_VAR>
+            <SWITCH_POSITION_TYPE>L</SWITCH_POSITION_TYPE>
+            <SWITCH_POSITION_VAR>A32NX_FIRE_BUTTON_STATE_#TYPE##ID#</SWITCH_POSITION_VAR>
             <LEFT_SINGLE_CODE>1 (>L:A32NX_FIRE_BUTTON_#TYPE##ID#)</LEFT_SINGLE_CODE>
             <LEFT_LEAVE_CODE/>
             <ANIM_DURATION>0.3</ANIM_DURATION>
@@ -84,10 +92,9 @@
             <NODE_ID>#NODE_ID#</NODE_ID>
             <ANIM_NAME>#NODE_ID#</ANIM_NAME>
             <CURSOR>Grab</CURSOR>
-
             <ANIM_LENGTH>100</ANIM_LENGTH>
-            <SWITCH_POSITION_TYPE>O</SWITCH_POSITION_TYPE>
-            <SWITCH_POSITION_VAR>_ButtonAnimVar</SWITCH_POSITION_VAR>
+            <SWITCH_POSITION_TYPE>L</SWITCH_POSITION_TYPE>
+            <SWITCH_POSITION_VAR>A32NX_FIRE_GUARD_STATE_#TYPE##ID#</SWITCH_POSITION_VAR>
             <LEFT_SINGLE_CODE>1 (>L:FIRE_GUARD_#ID#)</LEFT_SINGLE_CODE>
             <LEFT_LEAVE_CODE/>
             <ANIM_DURATION>0.3</ANIM_DURATION>
